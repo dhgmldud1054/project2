@@ -1,0 +1,741 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUG주택도시보증공사</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+
+    <!-- fullscreenmmenu소스 -->
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style6.css" />
+    <script src="js/modernizr.custom.js"></script>
+
+    <style type="text/css">
+        body {
+            font-size: 1.6em;
+        }
+
+        /*TAB CSS*/
+
+        ul.tabs {
+            margin: 0;
+            padding: 0;
+            float: left;
+            list-style: none;
+            height: 53px;
+            /*--Set height of tabs--*/
+            border-bottom: 1px solid #999;
+            border-left: 1px solid #999;
+            width: 932px
+        }
+
+        ul.tabs li {
+            float: left;
+            margin: 0;
+            padding: 0;
+            height: 52px;
+            /*--Subtract 1px from the height of the unordered list--*/
+            line-height: 52px;
+            /*--Vertically aligns the text within the tab--*/
+            border: 1px solid #999;
+            border-left: none;
+            margin-bottom: -1px;
+            /*--Pull the list item down 1px--*/
+            overflow: hidden;
+            position: relative;
+            background: #dfdedf;
+        }
+
+        ul.tabs li:nth-child(2),
+        ul.tabs li:nth-child(3),
+        ul.tabs li:nth-child(4) {
+            line-height: revert;
+            text-align: center;
+            display: flex;
+            align-items: center
+        }
+
+
+
+        ul.tabs li a {
+            text-decoration: none;
+            color: #000;
+            display: block;
+
+            font-weight: bold;
+            padding: 0 20px;
+            /*--Gives the bevel look with a 1px white border inside the list item--*/
+            outline: none;
+        }
+
+        ul.tabs li a:hover {
+            background: #efeeef;
+        }
+
+        html ul.tabs li.active,
+        html ul.tabs li.active a:hover {
+            /*--Makes sure that the active tab does not listen to the hover properties--*/
+            background: #fff;
+            /*--Makes the active tab look like it's connected with its content--*/
+            border-bottom: 1px solid #fff;
+        }
+
+        /*Tab Conent CSS*/
+        .tab_container {
+            border: 1px solid #b5b1b5;
+            border-top: none;
+            overflow: hidden;
+            clear: both;
+            float: left;
+            width: 932px;
+            /*
+            height: 319px;*/
+            height: auto;
+            margin-bottom: 30px;
+            background: #fff;
+        }
+
+        .tab_content {
+            padding: 40px
+        }
+
+        .tab_content p {
+            line-height: 180%
+        }
+
+        @media (max-width: 1249px) {
+            ul.tabs {
+                width: 65%
+            }
+
+            .tab_container {
+                width: 65%
+            }
+
+
+        }
+
+        @media (max-width: 1400px) {
+
+            ul.tabs,
+            .tab_container {
+                width: 65%
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            ul.tabs,
+            .tab_container {
+                width: 100%
+            }
+
+            ul.tabs {
+                float: none
+            }
+
+        }
+
+        @media (max-width: 527px) {
+            ul.tabs>li {
+                width: calc(100%/4 - 1px)
+            }
+        }
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            //When page loads...
+            $(".tab_content").hide(); //Hide all content
+            $("ul.tabs li:first").addClass("active").show(); //Activate first tab
+            $(".tab_content:first").show(); //Show first tab content
+
+            //On Click Event
+            $("ul.tabs li").click(function() {
+
+                $("ul.tabs li").removeClass("active"); //Remove any "active" class
+                $(this).addClass("active"); //Add "active" class to selected tab
+                $(".tab_content").hide(); //Hide all tab content
+
+                var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+                $(activeTab).fadeIn(); //Fade in the active ID content
+                return false;
+            });
+
+        });
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+
+
+
+    <link rel="stylesheet" href="css/jquery.back-to-top.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <script>
+    
+        
+    $(function(){
+        
+        $('.menu>li').hover(function(){
+            
+            $('.submenu').stop().slideDown(); 
+        
+        }, function(){
+            $('.submenu').stop().slideUp();
+        }
+                           );
+        
+        $('.submenu').hover(function(){
+            $('.submenu').stop();
+        }, function(){
+            $('.submenu').stop().slideUp();
+        }
+                           );
+       
+        
+        
+        
+    });
+    </script>
+
+    <style>
+         .menu {
+            /* position: absolute; */
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 54% 
+        }
+
+        .menu>li {
+            float: left;
+            padding: 0 2%;
+            margin: 0 auto
+        }
+
+        .menu>li>a {
+            line-height: 78px;
+
+            font-weight: bold;
+            color: #000;
+        }
+
+        .menu>li>a:hover {
+            color: #0a861e;
+            transition: 0.3s
+        }
+
+
+
+.menu:after{display: block; content: ""; clear: both}
+        
+        /*서브네비*/
+
+        .submenu {
+/*            display: none; */
+            z-index: 1;
+    position: absolute;
+            left: 0;
+            width: 100%
+            
+            
+
+        }
+
+        .submenu_in {
+           
+            height: 330px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+        .submenu_in>ul {
+            float: left;
+            width: 13%;
+            padding-left: 1%;
+            padding-right: 1%;
+            border-left: 1px solid #dfdedf;
+            margin-left: 1%;
+        }
+
+        .submenu_in>ul>li {
+            height: 40px;
+            font-size: 1.5rem;
+            line-height: 40px;
+        }
+
+        .submenu_in>ul>li>a {
+            color: #000;
+            font-weight: bold;
+            position: relative;}
+            
+        .submenu_in>ul>li:hover {
+            background-color: #0b871e
+        }
+
+        .submenu_in>ul>li:hover a {
+            color: #fff
+        }
+
+
+
+
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="top_header">
+                <div class="inner">
+                    <!-- 부모 -->
+                    <div>
+                        <div class="h_left"><img src="img/logo.png" alt="로고"></div>
+                        <div class="h_right">
+                            <ul class="sub_menu">
+                                <li>본인인증</li>
+                                <li>인터넷보증</li>
+                                <li>전자입찰</li>
+                                <!-- clear:both -->
+                            </ul>
+
+                            <!-- backup start
+                        <div class="m_menu"><img src="img/icon_126150_64.png"></div>
+                        <div class="m_menu2">
+                            <img src="img/icon_2.png">
+                        </div>
+                        -->
+
+                            <button id="trigger-overlay" type="button"><img src="img/icon_126150_64.png"><span><img src="img/icon_2.png"></span></button>
+
+
+
+                            <div class="overlay overlay-door">
+                                <button type="button" class="overlay-close">Close</button>
+                                <nav>
+                                    <h3>HUG주택도시보증공사 전체메뉴</h3>
+                                    <ul class="main_ul">
+                                        <li><a href="#">아카데미 신청 바로가기</a>
+                                            <div class="sub_ul_papa">
+                                            </div>
+                                        </li>
+                                        <li><a href="#">사회임대주택사업</a>
+                                            <div class="sub_ul_papa">
+                                                <ul class="sub_ul">
+                                                    <li>
+                                                        <a href="#">사회임대주택이란?</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">사회임대주택 금융상품개요</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">사회임대주택 공급현황</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">사회임대주택 금융지원센터</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a href="#">보증상품</a>
+                                            <div class="sub_ul_papa">
+                                                <ul class="sub_ul">
+                                                    <li>
+                                                        <a href="#">보증업무안내</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">사회임대주택 PF보증(건설형)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">사회임대주택 매입자금보증(매입형)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">사회임대주택 기금건설자금대출보증</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">사회임대주택 임대보증금보증</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </li>
+                                        <li><a href="#">기금상품</a>
+                                            <div class="sub_ul_papa">
+                                                <ul class="sub_ul">
+                                                    <li>
+                                                        <a href="#">사회임대주택 건설자금융자</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">사회임대주택 매입자금융자</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a href="#">알림광장</a>
+                                            <div class="sub_ul_papa">
+                                                <ul class="sub_ul">
+                                                    <li>
+                                                        <a href="#">공지사항</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">보도자료</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">자료실</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">자주하는 질문</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a href="#">홍보게시판</a>
+                                            <div class="sub_ul_papa">
+                                                <ul class="sub_ul">
+                                                    <li>
+                                                        <a href="#">사업자 홍보게시판</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">사회임대주택 입주자 모집공고</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <script src="js/classie.js"></script>
+                            <script src="js/demo1.js"></script>
+
+
+                            <!-- clear:both -->
+                        </div>
+
+                    </div>
+
+                    <ul class="menu">
+
+                        <li><a href="#">아카데미 신청 바로가기</a></li>
+                        <li><a href="#">사회임대주택사업</a></li>
+                        <li><a href="#">보증상품</a></li>
+                        <li><a href="#">기금상품</a></li>
+                        <li><a href="#">알림광장</a></li>
+                        <li><a href="#">홍보게시판</a></li>
+
+                    </ul>
+                    <div class="submenu">
+                        <div class="submenu_in">
+                            <ul> 
+                            <h3>아카데미신청바로가기</h3>                              
+                            </ul>
+
+                            <ul>
+                               <h3>사회임대주택사업</h3>
+                                <li><a href="intro.html">사회임대주택이란?</a></li>
+                                <li><a href="intro.html">사회임대주택 금융상품개요</a></li>
+                                <li><a href="intro.html">사회임대주택 공급현황</a></li>
+                                <li><a href="intro.html">사회임대주택 금융지원센터</a></li>
+                                
+                            </ul>
+
+                            <ul>
+                               <h3>보증상품</h3>
+                                <li><a href="help.html">보증업무안내</a></li>
+                                <li><a href="help.html">사회임대주택 PF보증(건설형)</a></li>
+                                <li><a href="help.html">사회임대주택 매입자금보증(매입형)</a></li>
+                                <li><a href="help.html">사회임대주택 기금건설자금대출보증</a></li>
+                                <li><a href="help.html">사회임대주택 임대보증금보증</a></li>
+                            </ul>
+
+                            <ul>
+                               <h3>기금상품</h3>
+                                <li><a href="help.html">사회임대주택 건설자금융자</a></li>
+                                <li><a href="help.html">사회임대주택 매입자금융자</a></li>
+                            </ul>
+
+                            <ul>          
+                               <h3>알림광장</h3>                  
+                                <li><a href="help.html">공지사항</a></li>
+                                <li><a href="help.html">보도자료</a></li>
+                                <li><a href="help.html">자료실</a></li>
+                                 <li><a href="help.html">자주하는 질문</a></li>
+
+                            </ul>
+                             <ul>
+                               <h3>홍보게시판</h3>                            
+                                <li><a href="help.html">사업자 홍보게시판</a></li>
+                                <li><a href="help.html">사회임대주택 입주자 모집공고</a></li>
+                               
+
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="bottom_header">
+            </div>
+                            
+        </header>
+        <article id="mainimg">
+            <div class="inner">
+                <p>Recently Notice</p>
+
+
+                <h2>2020 사회주택 아카데미<br> 수요 설문조사 실시</h2>
+
+
+                <div class="banner_set">
+                    <h1 class="hidden">배너모음</h1>
+                    <div class="inner">
+                        <div><img src="img/bn1.png" alt="배너1"></div>
+                        <div><img src="img/bn2.png" alt="배너2"></div>
+                        <div><img src="img/bn3.png" alt="배너3"></div>
+                        <!-- clear:both -->
+                    </div>
+                </div>
+            </div>
+        </article>
+        <main id="contents">
+
+            <div class="notice">
+                <h1 class="hidden">공지사항</h1>
+                <div class="inner">
+                    <div class="notice_set">
+                        <div class="n_title">
+                            <p>Notice</p>
+                            <h4>공지사항</h4>
+                            <div>더보기</div>
+                        </div>
+                        <div class="n_text">
+                            <h4>LH '19-3차 공공지원 사회임대주택 민간사업자 공모<span>20191129</span></h4>
+                            <p>「19-3차 공공지원 사회임대주택 민간사업자 공모의 자세한 내용은 첨부파일에서 확인하시기 바랍니다.</p>
+                        </div>
+                        <!-- clear:both -->
+                    </div>
+
+                </div>
+            </div>
+            <div class="srh">
+                <h1 class="hidden">사회임대주택</h1>
+                <div class="inner">
+                    <!-- 
+                <div class="srh_tab"></div> -->
+
+                    <!--탭 메뉴 영역 -->
+                    <ul class="tabs">
+                        <li><a href="#tab1">사회임대주택이란</a></li>
+                        <li><a href="#tab2">사회임대주택<br>금융상품개요</a></li>
+                        <li><a href="#tab3">사회임대주택<br>공급현황</a></li>
+                        <li><a href="#tab4">사회임대주택<br>금융지원센터</a></li>
+                    </ul>
+
+                    <!--탭 콘텐츠 영역 -->
+                    <div class="tab_container">
+
+                        <div id="tab1" class="tab_content">
+                            <!--Content-->
+                            <div>
+                                <h1>"사회임대주택,
+                                    <br>
+                                    임대료 부담없이 지낼수 있어 다행이네요."
+                                </h1>
+                                <p>
+                                    저렴한 임대료로 장기간 안정적인 거주가 가능하도록
+                                    <br>사회적경제주체가 공급 및 운영·관리하는 임대주택으로<br>
+                                    공공임대주택에 입주하지 못하지만 민간임대주택의 높은 임대료는 부담스러운 주거약자를 위한 대안입니다.
+                                </p>
+                                <div class="btn"><a href="#">자세히보기</a></div>
+                            </div>
+
+
+                        </div>
+
+                        <div id="tab2" class="tab_content">
+                            <!--Content-->
+                            <div>
+                                <h1>
+                                    사회임대주택 공급활성화를 위하여
+                                    <br>다양한 맞춤형 상품을 개발 및 운용하고 있습니다.
+                                </h1>
+                                <div class="btn"><a href="#">자세히보기</a></div>
+                            </div>
+                        </div>
+                        <div id="tab3" class="tab_content">
+                            <!--Content-->
+                            <h1>
+                                사회임대주택 공급현황을<br>조회하실 수 있습니다.
+                            </h1>
+                            <div class="btn"><a href="#">자세히보기</a></div>
+                        </div>
+                        <div id="tab4" class="tab_content">
+                            <!--Content-->
+                            <h1>
+                                금융지원부터 맞춤형 사업 컨설팅 등<br>
+                                사업지원까지 원스톱패키지 서비스를 제공합니다.
+                            </h1>
+                            <div class="btn"><a href="#">자세히보기</a></div>
+                        </div>
+
+                    </div>
+
+                    <div class="srh_btnset">
+                        <div>
+                            <div class="srh_text">
+
+                                <p>사회임대주택</p>
+                                <h4>PF보증(건설형)</h4>
+                                <p>사업비에 대한 PF대출을
+                                    <br>지원하는 보증
+                                </p>
+
+
+                            </div>
+                            <div class="srh_icon"><img src="img/icon_blue.png" alt="블루아이콘"></div>
+                            <!-- clear:both -->
+                        </div>
+                        <div>
+                            <div class="srh_text">
+
+                                <p>사회임대주택</p>
+                                <h4>매입자금보증(매입형)</h4>
+                                <p>대출받는 임대주택매입자금을
+                                    <br>지원하는 보증
+                                </p>
+                            </div>
+                            <div class="srh_icon"><img src="img/icon_green.png" alt="그린아이콘"></div>
+                            <!-- clear:both -->
+                        </div>
+                        <!-- clear:both -->
+                    </div>
+
+
+                    <!-- clear:both -->
+                </div>
+            </div>
+            <div class="press">
+                <h1 class="hidden">보도자료</h1>
+                <div class="inner">
+                    <div class="p_img"><img src="img/bodo1.png" alt="보도자료이미지1">
+                        <p>물량 위주 공급은 옛말...<br>'맞춤형 임대주택'으로...</p>
+                    </div>
+                    <div class="p_img"><img src="img/bodo2.png" alt="보도자료이미지2">
+                        <p>물량 위주 공급은 옛말...<br>'맞춤형 임대주택'으로...</p>
+                    </div>
+                    <div class="p_img"><img src="img/bodo3.png" alt="보도자료이미지3">
+                        <p>물량 위주 공급은 옛말...<br>'맞춤형 임대주택'으로...</p>
+                    </div>
+                    <div class="p_img"><img src="img/bodo4.png" alt="보도자료이미지4">
+                        <p>물량 위주 공급은 옛말...<br>'맞춤형 임대주택'으로...</p>
+                    </div>
+                    <div class="p_text">
+                        <p>보도자료<span>더보기</span></p>
+                        <h3>물량 위주 공급은 옛말
+                            <br>'맞춤형 임대주택'으로
+                            <br>패러다임 바꾼다.
+                        </h3>
+                    </div>
+                    <!-- clear:both -->
+                </div>
+            </div>
+            <div class="logo_set">
+                <h1 class="hidden">영상버튼/로고슬라이더</h1>
+                <div class="inner">
+                    <div class="play">
+                        <div class="play_btn"><img src="img/icon_play.png" alt="플레이아이콘"></div>
+                        <div class="play_text">
+                            <h4>영상으로 보는 사회임대주택</h4>
+                            <p>사회임대주택 공급 활성화를 위한
+                                <br>금융지원 센터를 영상으로 만나보세요.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="logo_slider">
+                        <i>공동체주택플랫폼</i>
+                        <i>주택도시기금</i>
+                    </div>
+                    <!-- clear:both -->
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="inner">
+                <div class="copyright">
+                    <ul>
+                        <li>개인정보처리방침</li>
+                        <li>영상정보처리기기</li>
+                        <li>운영관리방침</li>
+                        <li>이메일집단수집거부</li>
+                        <li>저작권및공공데이터법</li>
+                        <li>홈페이지이용안내</li>
+                        <li>청탁금지법</li>
+                        <li>위반신고</li>
+                        <!-- clear:both -->
+                    </ul>
+                    <div class="adress">
+                        <p><span>
+                                우)48400 부산광역시 남구 문현금융로 40 BIFC
+                                <br>Tel : 1566-9009 Fax : 051-955-5405
+                            </span>
+
+                            <br>© Korea Housing & Urban Guarantee Corporation. All rights reserved.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="footer_logo">
+                    <i><img src="img/wa_logo.png" alt="walogo"></i>
+                    <i class="snsicon"><img src="img/fb.png" alt="페북logo"></i>
+                    <i class="snsicon"><img src="img/tw.png" alt="트위터logo"></i>
+                    <i class="snsicon"><img src="img/blo.png" alt="블로그logo"></i>
+                </div>
+                <!-- clear:both -->
+            </div>
+        </footer>
+
+    </div>
+    <a href="#" class="bck"></a>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="css/jquery.back-to-top.js"></script>
+    <script>
+        $(function() {
+
+
+            $('.bck').backToTop({
+                iconName: 'fas fa-arrow-up',
+                fxName: 'rightToLeft'
+            });
+
+        });
+    </script>
+</body>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script></html>

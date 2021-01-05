@@ -1,0 +1,89 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+/*
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+*/
+
+/*
+body {	
+	font-family: 'Lato', 'Avenir Next', Arial, sans-serif;} 
+a {
+	color: #99cc33;
+	text-decoration: none;
+	outline: none;
+}
+*/
+
+/*
+a:hover, a:focus {
+	color: #373e18;
+}
+
+/* To Navigation Style */
+
+
+
+#trigger-overlay {
+	display: inline-block;float: right; width: 42px; height: 40px; background-color: #fff; border-width : 0px
+}
+#trigger-overlay >img{width: 100%}
+
+
+
+#trigger-overlay>span {
+	display: none;float: right; width: 42px; height: 40px; background-color: #fff; border-width : 0px}
+
+@media (max-width: 1315px){
+    #trigger-overlay{margin-top: 20px}
+}
+
+@media (max-width: 768px){
+
+}
+
+
+
+
+/*
+.codrops-demos a:hover,
+.codrops-demos a:active,
+.codrops-demos a.current-demo {
+	background: #777;
+}
+
+section {
+	padding: 1em 2em 5em;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+section p {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+section button {
+	border: none;
+	padding: 15px 30px;
+	outline: none;
+	background: #85b91e;
+}
+
+
+@media screen and (max-width: 25em) {
+	.codrops-icon span {
+		display: none;
+	}
+}*/
